@@ -1,0 +1,9 @@
+[project]
+name = "aewu-project"
+version = "0.1.0"
+description = "AEWU Project - It's an interesting project collection created by aewu (me)."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "reflex>=0.9.6.post1",
+]
