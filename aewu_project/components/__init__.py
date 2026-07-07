@@ -1,7 +1,8 @@
-from .navigation_bar import navigation_bar
 from .footer import footer
+from .navigation_bar import navigation_bar
+
 
 __all__ = [
-    "navigation_bar",
-    "footer"
+    "footer",
+    "navigation_bar"    
 ]

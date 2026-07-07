@@ -1,5 +1,7 @@
 from typing import Literal
+
 import reflex as rx
+
 from ..components import navigation_bar
 from ..components import footer
 
