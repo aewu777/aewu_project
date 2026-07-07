@@ -1,5 +1,5 @@
 import reflex as rx
-from ..layouts.common_layout import common_layout
+from ..layouts import common_layout
 
 
 @rx.page(route="/", title="AEWU Project | Index")

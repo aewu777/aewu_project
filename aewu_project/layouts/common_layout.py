@@ -1,6 +1,6 @@
 import reflex as rx
-from ..components.navigation_bar import navigation_bar
-from ..components.footer import footer
+from ..components import navigation_bar
+from ..components import footer
 
 
 def common_layout(*children, **props) -> rx.Component:
