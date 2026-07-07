@@ -3,7 +3,7 @@ from ..layouts import common_layout
 
 
 @rx.page(route="/", title="AEWU Project | Index")
-def index():
+def index_page():
     return common_layout(
         rx.vstack(
             rx.heading("Welcome!", size="8"),

@@ -1,5 +1,5 @@
-from .index import index
+from .index import index_page
 
 __all__ = [
-    "index"
+    "index_page"
 ]
