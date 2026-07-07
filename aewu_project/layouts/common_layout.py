@@ -1,9 +1,14 @@
+from typing import Literal
 import reflex as rx
 from ..components import navigation_bar
 from ..components import footer
 
 
-def common_layout(*children, **props) -> rx.Component:
+def common_layout(
+    *children,
+    align:  Literal['start', 'center', 'end'],
+    **props
+) -> rx.Component:
     return rx.box(
         rx.vstack(
             rx.container(
@@ -12,14 +17,15 @@ def common_layout(*children, **props) -> rx.Component:
                 width="100%",
                 flex="0"
             ),
-            rx.center(
+            rx.flex(
                 rx.container(
                     *children,
                     size="4",
                     **props
                 ),
                 width="100%",
-                flex="1"
+                flex="1",
+                align=align
             ),
             rx.container(
                 footer(),

@@ -19,5 +19,6 @@ def index_page():
                 width="50%"
             ),
             align="center"
-        )
+        ),
+        align="center"
     )
