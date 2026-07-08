@@ -11,6 +11,21 @@ def counter_page():
         rx.vstack(
             rx.heading(CounterState.count, size="9"),
             rx.hstack(
+                rx.input(
+                    value=CounterState.decrement_step,
+                    placeholder="Any integer you want...",
+                    on_change=CounterState.set_decrement_step,
+                    flex="1"
+                ),
+                rx.input(
+                    value=CounterState.increment_step,
+                    placeholder="Any integer you want...",
+                    on_change=CounterState.set_increment_step,
+                    flex="1"
+                ),
+                width="100%"
+            ),
+            rx.hstack(
                 rx.button(
                     "Decrement",
                     color_scheme="tomato",
