@@ -34,7 +34,7 @@ def _tabs_content():
                                 "Source",
                                 width="100%"
                             ),
-                            href=f"{project_links["github"]}/tree/master/aewu_project/pages/{cat[0]}/{proj["src"]}",
+                            href=f"{project_links["github"]}/tree/master/aewu_project/pages/projects/{cat[0]}/{proj["src"]}",
                             is_external=True,
                             flex="1"
                         ),
