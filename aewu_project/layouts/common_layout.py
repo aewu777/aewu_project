@@ -9,6 +9,7 @@ from ..components import footer
 def common_layout(
     *children,
     align:  Literal['start', 'center', 'end'],
+    content_size: Literal['1', '2', '3', '4'] = "4",
     **props
 ) -> rx.Component:
     return rx.box(
@@ -22,7 +23,7 @@ def common_layout(
             rx.flex(
                 rx.container(
                     *children,
-                    size="4",
+                    size=content_size,
                     **props
                 ),
                 width="100%",
