@@ -46,3 +46,7 @@ class CounterState(rx.State):
                 ),
                 close_button=True
             )
+
+    @rx.event
+    def set_count(self, value: int):
+        self.count = int(value)
