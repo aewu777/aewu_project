@@ -16,6 +16,30 @@ class CounterState(rx.State):
         self.count -= self.decrement_step
 
     @rx.event
+    def double(self):
+        self.count *= 2
+
+    @rx.event
+    def triple(self):
+        self.count *= 3
+
+    @rx.event
+    def halve(self):
+        self.count = int(self.count / 2)
+
+    @rx.event
+    def third(self):
+        self.count = int(self.count / 3)
+    
+    @rx.event
+    def square(self):
+        self.count **= 2
+
+    @rx.event
+    def sqrt(self):
+        self.count = int(self.count ** 0.5)
+
+    @rx.event
     def reset_count(self):
         self.count = 0
 
@@ -46,7 +70,3 @@ class CounterState(rx.State):
                 ),
                 close_button=True
             )
-
-    @rx.event
-    def set_count(self, value: int):
-        self.count = int(value)

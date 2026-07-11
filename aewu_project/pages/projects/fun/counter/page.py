@@ -54,13 +54,13 @@ def counter_page():
                         rx.button(
                             "Double",
                             color_scheme="bronze",
-                            on_click=CounterState.set_count(CounterState.count * 2),
+                            on_click=CounterState.double,
                             flex="1"
                         ),
                         rx.button(
                             "Triple",
                             color_scheme="bronze",
-                            on_click=CounterState.set_count(CounterState.count * 3),
+                            on_click=CounterState.triple,
                             flex="1"
                         ),
                         width="100%"
@@ -69,13 +69,13 @@ def counter_page():
                         rx.button(
                             "Halve",
                             color_scheme="bronze",
-                            on_click=CounterState.set_count(CounterState.count / 2),
+                            on_click=CounterState.halve,
                             flex="1"
                         ),
                         rx.button(
                             "Third",
                             color_scheme="bronze",
-                            on_click=CounterState.set_count(CounterState.count / 3),
+                            on_click=CounterState.third,
                             flex="1"
                         ),
                         width="100%"
@@ -84,13 +84,13 @@ def counter_page():
                         rx.button(
                             "Square",
                             color_scheme="bronze",
-                            on_click=CounterState.set_count(CounterState.count ** 2),
+                            on_click=CounterState.square,
                             flex="1"
                         ),
                         rx.button(
                             "Sqrt",
                             color_scheme="bronze",
-                            on_click=CounterState.set_count(CounterState.count ** 0.5),
+                            on_click=CounterState.sqrt,
                             flex="1"
                         ),
                         width="100%"
