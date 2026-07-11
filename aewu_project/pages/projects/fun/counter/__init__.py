@@ -1,4 +1,4 @@
-from .counter import counter_page
+from .page import counter_page
 
 
 __all__ = [
