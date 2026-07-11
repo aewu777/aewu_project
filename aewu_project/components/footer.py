@@ -12,7 +12,7 @@ def footer() -> rx.Component:
             align="center"
         ),
         rx.hstack(
-            rx.link("GitHub", href=project_links["github"])
+            rx.link("GitHub", href=project_links['github'])
         ),
         justify="between"
     )

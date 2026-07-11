@@ -18,9 +18,9 @@ def _tabs_content():
             [rx.card(
                 rx.vstack(
                     rx.box(
-                        rx.heading(proj["name"], size="4"),
+                        rx.heading(proj['name'], size="4"),
                         rx.text(
-                            proj["desc"],
+                            proj['desc'],
                             size="3",
                             color_scheme="gray",
                             overflow="hidden",
@@ -34,7 +34,7 @@ def _tabs_content():
                                 "Source",
                                 width="100%"
                             ),
-                            href=f"{project_links["github"]}/tree/master/aewu_project/pages/projects/{cat[0]}/{proj["src"]}",
+                            href=f"{project_links['github']}/tree/master/aewu_project/pages/projects/{cat[0]}/{proj['src']}",
                             is_external=True,
                             flex="1"
                         ),
@@ -45,7 +45,7 @@ def _tabs_content():
                                 variant="surface",
                                 width="100%"
                             ),
-                            href=f"{cat[0]}/{proj["href"]}",
+                            href=f"{cat[0]}/{proj['href']}",
                             flex="1"
                         ),
                         width="100%"
