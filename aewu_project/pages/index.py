@@ -9,15 +9,13 @@ def index_page():
         rx.vstack(
             rx.heading("Welcome!", size="8"),
             rx.text(
-                "It's an interesting project collection created by ",
-                rx.code("aewu"),
-                " (me). ",
-                "My projects is ",
-                rx.text.em("open source. "),
-                "So, you can do anything.",
+                "It's an interesting project collection created by aewu (me). " \
+                "My projects are ",
+                rx.text.em("open source"),
+                " — so, you can do anything.",
                 size="4",
                 align="center",
-                width="50%"
+                width="50%",
             ),
             align="center"
         ),
