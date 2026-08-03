@@ -4,12 +4,12 @@ from ...layouts import common_layout
 
 from ...config import project_links
 
-from .data import projects
+from .data import PROJECTS
 
 
 def _tabs_list():
     return rx.tabs.list(
-        [rx.tabs.trigger(cat[0].capitalize(), value=cat[0]) for cat in projects]
+        [rx.tabs.trigger(cat[0].capitalize(), value=cat[0]) for cat in PROJECTS]
     )
 
 def _tabs_content():
@@ -17,21 +17,23 @@ def _tabs_content():
         rx.grid(
             [rx.card(
                 rx.vstack(
-                    rx.box(
-                        rx.heading(proj['name'], size="4"),
+                    rx.vstack(
+                        rx.heading(proj['name'], size="4", text_transform="uppercase"),
                         rx.text(
                             proj['desc'],
                             size="3",
                             color_scheme="gray",
                             overflow="hidden",
                             text_overflow="ellipsis"
-                        )
+                        ),
+                        spacing='2'
                     ),
                     rx.hstack(
                         rx.link(
                             rx.button(
                                 rx.icon("code", size=16),
                                 "Source",
+                                variant="surface",
                                 width="100%"
                             ),
                             href=f"{project_links['github']}/tree/master/aewu_project/pages/projects/{cat[0]}/{proj['src']}",
@@ -42,14 +44,14 @@ def _tabs_content():
                             rx.button(
                                 rx.icon("arrow_big_right", size=16),
                                 "Check",
-                                variant="surface",
                                 width="100%"
                             ),
                             href=f"{cat[0]}/{proj['href']}",
                             flex="1"
                         ),
                         width="100%"
-                    )
+                    ),
+                    spacing='4'
                 ),
                 size="2"
             ) for proj in cat[1]],
@@ -58,7 +60,7 @@ def _tabs_content():
             margin_top="var(--space-4)"
         ),
         value=cat[0]
-    ) for cat in projects]
+    ) for cat in PROJECTS]
 
 @rx.page("/projects", "AEWU Project | Projects")
 def projects_page():
@@ -66,7 +68,7 @@ def projects_page():
         rx.tabs.root(
             _tabs_list(),
             _tabs_content(),
-            default_value=projects[0][0]
+            default_value=PROJECTS[0][0]
         ),
         align="start"
     )

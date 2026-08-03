@@ -1,8 +1,8 @@
-projects = [
+PROJECTS = [
     ("fun", [
         {
             "name": "Counter",
-            "desc": "A non-standard counter with many useful features.",
+            "desc": "A standard counter with useful features.",
             "href": "/counter",
             "src": "counter"
         }
