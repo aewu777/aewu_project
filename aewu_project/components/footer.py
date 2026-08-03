@@ -1,6 +1,6 @@
 import reflex as rx
 
-from ..config import project_links
+from ..config import PROJECT_LINKS
 
 
 def footer() -> rx.Component:
@@ -12,7 +12,7 @@ def footer() -> rx.Component:
             align="center"
         ),
         rx.hstack(
-            rx.link("GitHub", href=project_links['github'])
+            rx.link("GitHub", href=PROJECT_LINKS['github'])
         ),
         justify="between"
     )

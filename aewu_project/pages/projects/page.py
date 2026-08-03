@@ -2,7 +2,7 @@ import reflex as rx
 
 from ...layouts import common_layout
 
-from ...config import project_links
+from ...config import PROJECT_LINKS
 
 from .data import PROJECTS
 
@@ -36,7 +36,7 @@ def _tabs_content():
                                 variant="surface",
                                 width="100%"
                             ),
-                            href=f"{project_links['github']}/tree/master/aewu_project/pages/projects/{cat[0]}/{proj['src']}",
+                            href=f"{PROJECT_LINKS['github']}/tree/master/aewu_project/pages/projects/{cat[0]}/{proj['src']}",
                             is_external=True,
                             flex="1"
                         ),

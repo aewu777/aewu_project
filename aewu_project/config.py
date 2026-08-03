@@ -1,3 +1,3 @@
-project_links = {
+PROJECT_LINKS = {
     "github": "https://github.com/aewu777/aewu_project"
 }
